@@ -101,6 +101,7 @@ h2 {
   padding: 2rem 1rem;
   background-color: #f9f3e7;
   border-top: 2px solid #e0c4a1;
+  position: relative;
 }
 
 /* Video Popup */
@@ -144,9 +145,10 @@ h2 {
 
 /* Tombol Chat WA */
 .chat-wa {
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  bottom: 100%;
   right: 20px;
+  margin-bottom: 20px;
   z-index: 9999;
 }
 
@@ -154,6 +156,8 @@ h2 {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  background-color: #a0522d;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
 }
