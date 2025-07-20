@@ -151,6 +151,21 @@ footer {
   cursor: pointer;
 }
 
+.maps-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #a0522d;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.maps-button:hover {
+  background-color: #8b4513;
+}
+
 @media screen and (max-width: 600px) {
   .produk {
     flex-direction: column;
