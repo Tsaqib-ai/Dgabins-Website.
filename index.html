@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D'gabins</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="assets/img/logo.png" alt="Logo D'gabins" class="logo">
+    <img src="assets/img/logo.png" alt="Logo D'gabins" class="logo" />
     <h1>D'gabins</h1>
-    <p>Gabins Kekinian, Rasa Tradisional</p>
   </header>
 
   <h2>Produk Kami</h2>
   <section class="produk">
     <div class="kartu-produk">
       <img src="assets/img/produk1.jpg" alt="Produk 1">
-      <h3>D'gabins Original</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Keju</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk2.jpg" alt="Produk 2">
-      <h3>D'gabins Coklat</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Coklat</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk3.jpg" alt="Produk 3">
-      <h3>D'gabins Keju</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Spesial</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk4.jpg" alt="Produk 4">
-      <h3>D'gabins Red Velvet</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Oreo</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk5.jpg" alt="Produk 5">
-      <h3>D'gabins Matcha</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Tiramisu</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk6.jpg" alt="Produk 6">
-      <h3>D'gabins Tiramisu</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Matcha</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk7.jpg" alt="Produk 7">
-      <h3>D'gabins Kopi</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Red Velvet</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk8.jpg" alt="Produk 8">
-      <h3>D'gabins Pandan</h3>
-      <a href="#" class="btn">Pesan Sekarang</a>
+      <h3>Gabins Kopi</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
     <div class="kartu-produk">
       <img src="assets/img/produk9.jpg" alt="Produk 9">
-      <h3>D'gabins Video</h3>
-      <button class="btn" onclick="bukaPopup()">Lihat Video</button>
+      <h3>Gabins Vanilla</h3>
+      <a href="#" class="btn">Pesan</a>
     </div>
   </section>
 
   <section class="kontak">
     <h2>Hubungi Kami</h2>
-    <p>Whatsapp: 08xxxxxxxxxx</p>
-    <p>Instagram: @dgabins</p>
+    <p>Untuk pemesanan atau pertanyaan, silakan hubungi kami melalui WhatsApp atau media sosial.</p>
   </section>
 
   <footer>
@@ -75,12 +73,19 @@
   <!-- Popup Video -->
   <div id="popup">
     <div class="popup-content">
-      <span class="close" onclick="tutupPopup()">&times;</span>
-      <video controls>
-        <source src="assets/video/VID-20250720-WA0004.mp4" type="video/mp4">
-        Maaf, browser Anda tidak mendukung pemutaran video.
+      <span class="close" onclick="hidePopup()">&times;</span>
+      <video id="popupVideo" controls>
+        <source src="assets/video/promo.mp4" type="video/mp4" />
+        Maaf, browser kamu tidak mendukung video.
       </video>
     </div>
+  </div>
+
+  <!-- Tombol Chat WhatsApp -->
+  <div class="chat-wa">
+    <a href="https://wa.me/6285692809806?text=Halo%20saya%20mau%20pesan%20produk%20D'gabins" target="_blank">
+      <img src="assets/img/wa-icon.png" alt="Chat WhatsApp" />
+    </a>
   </div>
 
   <script src="script.js"></script>
