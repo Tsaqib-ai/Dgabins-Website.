@@ -1,92 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D'gabins</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aneka kue gabin dengan rasa yang pas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="assets/img/logo.png" alt="Logo D'gabins" class="logo" />
+    <img src="img/logo.png" alt="D'gabins Logo" class="logo">
     <h1>D'gabins</h1>
   </header>
 
-  <h2>Produk Kami</h2>
-  <section class="produk">
-    <div class="kartu-produk">
-      <img src="assets/img/produk1.jpg" alt="Produk 1">
-      <h3>Gabins Keju</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk2.jpg" alt="Produk 2">
-      <h3>Gabins Coklat</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk3.jpg" alt="Produk 3">
-      <h3>Gabins Spesial</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk4.jpg" alt="Produk 4">
-      <h3>Gabins Oreo</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk5.jpg" alt="Produk 5">
-      <h3>Gabins Tiramisu</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk6.jpg" alt="Produk 6">
-      <h3>Gabins Matcha</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk7.jpg" alt="Produk 7">
-      <h3>Gabins Red Velvet</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk8.jpg" alt="Produk 8">
-      <h3>Gabins Kopi</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-    <div class="kartu-produk">
-      <img src="assets/img/produk9.jpg" alt="Produk 9">
-      <h3>Gabins Vanilla</h3>
-      <a href="#" class="btn">Pesan</a>
-    </div>
-  </section>
+  <main>
+    <h2>Produk Kami</h2>
+    <section class="produk">
+      <!-- Produk akan ditampilkan di sini -->
+    </section>
+  </main>
 
-  <section class="kontak">
-    <h2>Hubungi Kami</h2>
-    <p>Untuk pemesanan atau pertanyaan, silakan hubungi kami melalui WhatsApp atau media sosial.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 D'gabins. All rights reserved.</p>
-  </footer>
+  <!-- Tombol Lihat Video -->
+  <div class="video-button">
+    <button onclick="showPopup()" class="btn">Lihat Video Produk</button>
+  </div>
 
   <!-- Popup Video -->
   <div id="popup">
     <div class="popup-content">
       <span class="close" onclick="hidePopup()">&times;</span>
       <video id="popupVideo" controls>
-        <source src="assets/video/promo.mp4" type="video/mp4" />
-        Maaf, browser kamu tidak mendukung video.
+        <source src="video/produk-video.mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutaran video.
       </video>
     </div>
   </div>
 
-  <!-- Tombol Chat WhatsApp -->
+  <section class="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>@dgabins</p>
+  </section>
+
+  <!-- Tombol WA -->
   <div class="chat-wa">
-    <a href="https://wa.me/6285692809806?text=Halo%20saya%20mau%20pesan%20produk%20D'gabins" target="_blank">
-      <img src="assets/img/wa-icon.png" alt="Chat WhatsApp" />
+    <a href="https://wa.me/6285692809806" target="_blank">
+      <img src="img/wa-icon.png" alt="Chat WA">
     </a>
+    <span>Chat WA</span>
   </div>
+
+  <!-- Tombol Instagram -->
+  <div class="chat-ig">
+    <a href="https://instagram.com/dgabins" target="_blank">
+      <img src="img/ig-icon.png" alt="Instagram">
+    </a>
+    <span>@dgabins</span>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 D'gabins. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
