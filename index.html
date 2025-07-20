@@ -15,25 +15,46 @@
   <main>
     <h2>Produk Kami</h2>
     <section class="produk">
-      <!-- Produk akan ditampilkan di sini -->
+      <div class="produk-item">
+        <img src="img/produk1.jpg" alt="Gabin Original">
+        <h3>Gabin Original</h3>
+      </div>
+      <div class="produk-item">
+        <img src="img/produk2.jpg" alt="Gabin Coklat">
+        <h3>Gabin Coklat</h3>
+      </div>
+      <div class="produk-item">
+        <img src="img/produk3.jpg" alt="Gabin Keju">
+        <h3>Gabin Keju</h3>
+      </div>
+      <div class="produk-item">
+        <img src="img/produk4.jpg" alt="Gabin Mix">
+        <h3>Gabin Mix</h3>
+      </div>
+      <div class="produk-item">
+        <img src="img/produk5.jpg" alt="Gabin Pisang">
+        <h3>Gabin Pisang</h3>
+      </div>
+      <div class="produk-item">
+        <img src="img/produk6.jpg" alt="Gabin Susu">
+        <h3>Gabin Susu</h3>
+      </div>
     </section>
-  </main>
 
-  <!-- Tombol Lihat Video -->
-  <div class="video-button">
-    <button onclick="showPopup()" class="btn">Lihat Video Produk</button>
-  </div>
-
-  <!-- Popup Video -->
-  <div id="popup">
-    <div class="popup-content">
-      <span class="close" onclick="hidePopup()">&times;</span>
-      <video id="popupVideo" controls>
-        <source src="video/produk-video.mp4" type="video/mp4">
-        Maaf, browser Anda tidak mendukung pemutaran video.
-      </video>
+    <div class="video-button">
+      <button class="btn" onclick="showPopup()">Lihat Video Produk</button>
     </div>
-  </div>
+
+    <div id="popup">
+      <div class="popup-content">
+        <span class="close" onclick="hidePopup()">&times;</span>
+        <video controls>
+          <source src="video/video-produk.mp4" type="video/mp4">
+          Maaf, browser Anda tidak mendukung pemutar video.
+        </video>
+      </div>
+    </div>
+  </main>
 
   <section class="kontak">
     <h2>Hubungi Kami</h2>
