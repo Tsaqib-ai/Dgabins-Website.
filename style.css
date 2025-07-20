@@ -1,130 +1,138 @@
-/* ===== style.css ===== */
+/* style.css */
 
-/* Reset dan dasar */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #fffaf0;
+  color: #333;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fefae0;
-  color: #4e342e;
-}
-
-/* Header dan footer full width */
-header, footer {
-  width: 100vw;
-  margin: 0;
-  padding: 1.5rem 0;
-  background-color: #8b4513;
+header {
+  background-color: #a0522d;
   color: white;
   text-align: center;
-  position: relative;
-  left: 0;
+  padding: 1rem 0;
 }
 
-header .logo {
+.logo {
   width: 100px;
   margin-bottom: 10px;
 }
 
-h1 {
-  margin: 0.2rem 0;
-  font-size: 2.2rem;
+main {
+  padding: 2rem;
 }
 
 h2 {
-  text-align: center;
-  color: #6b3f27;
-  margin-top: 2rem;
+  color: #a0522d;
 }
 
 .produk {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
 }
 
-.kartu-produk {
-  background-color: #fff7ec;
-  border: 1px solid #e0c4a1;
-  border-radius: 16px;
-  padding: 1rem;
-  width: 220px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.kartu-produk:hover {
-  transform: translateY(-5px);
-}
-
-.kartu-produk img {
-  max-width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.kartu-produk h3 {
-  margin-top: 0.8rem;
-  font-size: 1.1rem;
-  color: #5d4037;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #a0522d;
-  color: white;
-  text-decoration: none;
+.produk-item {
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  font-weight: bold;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.btn:hover {
-  background-color: #6b3f27;
+.produk-item img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 .kontak {
+  background-color: #a0522d;
+  color: white;
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f9f3e7;
-  border-top: 2px solid #e0c4a1;
-  position: relative;
+  padding: 1rem;
 }
 
-/* Video Popup */
+footer {
+  background-color: #a0522d;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.chat-wa,
+.chat-ig {
+  position: fixed;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.chat-wa {
+  bottom: 7rem;
+}
+
+.chat-ig {
+  bottom: 11rem;
+}
+
+.chat-wa img,
+.chat-ig img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.3rem;
+}
+
+.chat-wa span,
+.chat-ig span {
+  font-size: 12px;
+  color: #a0522d;
+  font-weight: bold;
+}
+
+.video-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.video-button .btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 16px;
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Popup Video */
 #popup {
   display: none;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
-  transition: opacity 0.3s ease;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .popup-content {
-  background: #fff;
-  border-radius: 12px;
+  background-color: white;
+  margin: 10% auto;
   padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
   text-align: center;
-  max-width: 90%;
-  max-height: 90%;
+  position: relative;
 }
 
 .popup-content video {
@@ -135,77 +143,21 @@ h2 {
 
 .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 2rem;
+  top: 10px;
+  right: 20px;
+  color: #a0522d;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* Tombol Chat WA */
-.chat-wa {
-  position: absolute;
-  bottom: 100%;
-  right: 20px;
-  margin-bottom: 20px;
-  z-index: 9999;
-}
-
-.chat-wa img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #a0522d;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-}
-
-.chat-wa img:hover {
-  transform: scale(1.1);
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
+@media screen and (max-width: 600px) {
+  .produk {
+    flex-direction: column;
+    align-items: center;
   }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .produk, .kontak {
-    padding: 1rem;
-  }
-
-  .kartu-produk {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .popup-content {
-    width: 90%;
-    padding: 0.5rem;
-  }
-
-  .close {
-    top: 10px;
-    right: 15px;
-  }
-
-  header .logo {
-    width: 80px;
-  }
-
-  .chat-wa img {
-    width: 50px;
-    height: 50px;
+  .chat-wa,
+  .chat-ig {
+    right: 0.5rem;
   }
 }
