@@ -1,11 +1,10 @@
-// ===== script.js =====
+// script.js
 
-// Tampilkan popup video
 function showPopup() {
-  document.getElementById("popup").style.display = "flex";
+  const popup = document.getElementById("popup");
+  popup.style.display = "block";
 }
 
-// Tutup popup video
 function hidePopup() {
   const popup = document.getElementById("popup");
   const video = document.getElementById("popupVideo");
@@ -14,11 +13,11 @@ function hidePopup() {
   video.currentTime = 0;
 }
 
-// Tutup popup saat klik luar konten
-window.addEventListener("click", function (event) {
+// Optional: close popup when clicking outside the video
+window.addEventListener("click", function (e) {
   const popup = document.getElementById("popup");
   const content = document.querySelector(".popup-content");
-  if (event.target === popup && !content.contains(event.target)) {
+  if (e.target === popup && !content.contains(e.target)) {
     hidePopup();
   }
 });
